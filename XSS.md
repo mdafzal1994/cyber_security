@@ -5,7 +5,7 @@
 ## How to Prevent Cross-site Scripting (XSS) 
  XSS attacks occur when an attacker injects malicious scripts into web pages viewed by other users. Here's a comprehensive approach to preventing XSS:
 
-# 1. Input Validation and Sanitization
+## 1. Input Validation and Sanitization
 Validate Input: Ensure that input conforms to expected formats, lengths, and types. Use server-side validation to check for valid input.
 Sanitize Input: Remove or escape characters that could be used in an XSS attack. For example, escape characters like <, >, ", and ' in HTML contexts.
 # 2. Output Encoding
