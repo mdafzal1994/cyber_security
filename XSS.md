@@ -9,7 +9,7 @@ reflected,stored XSS and DOM XSS
 **Validate Input**: Ensure that input conforms to expected formats, lengths, and types. Use server-side validation to check for valid input.
 **Sanitize Input**: Remove or escape characters that could be used in an XSS attack. For example, escape characters like <, >, ", and ' in HTML contexts.
 ### 2. Output Encoding
-**HTML Encoding**: Encode output data when it is inserted into HTML. This means converting special characters to their HTML entity equivalents (e.g., < becomes '&lt;).
+**HTML Encoding**: Encode output data when it is inserted into HTML. This means converting special characters to their HTML entity equivalents (e.g., < becomes '& lt;).
 **JavaScript Encoding**: If inserting data into JavaScript contexts, ensure that characters are properly encoded to prevent script injection.
 **CSS Encoding**: If inserting data into CSS, ensure it is properly escaped to prevent injection.
 ### 3. Use Safe Methods for Rendering Data
