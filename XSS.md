@@ -1,6 +1,8 @@
 # Cross-site Scripting (XSS)
 
-reflected,stored XSS and DOM XSS
+reflected,stored XSS https://www.acunetix.com/websitesecurity/cross-site-scripting/
+
+DOM XSS https://www.invicti.com/learn/dom-based-cross-site-scripting-dom-xss/
 
 ## How to Prevent Cross-site Scripting (XSS) 
  XSS attacks occur when an attacker injects malicious scripts into web pages viewed by other users. Here's a comprehensive approach to preventing XSS:
