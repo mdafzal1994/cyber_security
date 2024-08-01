@@ -2,7 +2,7 @@
 
 
 
-# How to Prevent Cross-site Scripting (XSS) 
+## How to Prevent Cross-site Scripting (XSS) 
  XSS attacks occur when an attacker injects malicious scripts into web pages viewed by other users. Here's a comprehensive approach to preventing XSS:
 
 # 1. Input Validation and Sanitization
