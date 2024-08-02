@@ -8,7 +8,8 @@ ref: https://www.invicti.com/learn/cookie-security-flags/
 **Use Cas**e: The HttpOnly flag is commonly used for session cookies or any other cookies that store sensitive information, such as authentication tokens. By marking these cookies as HttpOnly, you help ensure that their data cannot be easily stolen by attackers through client-side scripts.
 eg .**Set-Cookie: sessionId=abc123; HttpOnly**
 
-###Limitations of HttpOnly
+### Limitations of HttpOnly
+
 **Cookie Overwriting**: While HttpOnly protects the cookie from being accessed via JavaScript, it does not protect it from being overwritten by server-side responses or other mechanisms. If an attacker can manipulate the server's responses or intercept requests, they might be able to overwrite cookies, including those with the HttpOnly flag.
 
 **Cookie Jar Overflow Attack**:
