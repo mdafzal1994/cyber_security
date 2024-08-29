@@ -66,33 +66,47 @@ ports, services, and known vulnerabilities. Tools like OWASP ZAP and Burp Suite 
 Testing for Common Vulnerabilities:
 
 **Injection Attacks**: I test for various injection vulnerabilities such as SQL injection, Command injection, and others.
+
 **Cross-Site Scripting (XSS)**: I check for different types of XSS vulnerabilities, including Reflected, Stored, and DOM-based XSS.
+
 **Cross-Site Request Forgery (CSRF)**: I assess the application for CSRF vulnerabilities, ensuring that sensitive actions require valid user interaction.
+
 **Broken Authentication and Session Management**: I evaluate the authentication mechanisms and session management practices to identify weaknesses.
+
 **Insecure Direct Object References (IDOR)**: I test if unauthorized users can access or manipulate resources beyond their permissions.
+
 **Security Misconfigurations**: I look for misconfigurations in the server and application settings, check for default credentials, and verify
 the presence and proper configuration of HTTP security headers.
+
 
 **Access Controls:** I ensure that access controls are properly enforced, verifying that users can only access resources and perform actions 
 according to their permissions. I also check for potential privilege escalation issues.
 
+
 **Business Logic Testing:** I analyze application workflows for logical flaws that could be exploited. This involves ensuring that the
 application’s functionalities are secure and operate as intended.
 
+
 **Data Security:** I check for the exposure of sensitive data, ensuring that data is encrypted and securely handled both in transit and at rest.
+
 
 **Network Security Testing:** I evaluate SSL/TLS configurations to ensure secure communication and test for vulnerabilities to 
 Man-in-the-Middle (MitM) attacks.
 
+
 **Error Handling and Logging:** I review error messages and logging practices to ensure they do not expose sensitive information or security details.
 
+
 **Exploitation:** I manually exploit identified vulnerabilities to confirm their impact and develop proof-of-concept (PoC) exploits to demonstrate the risks.
+
 
 **Reporting:** I document all findings in detailed reports, including the risk levels, evidence, and recommendations for remediation. 
 These reports are crucial for communicating vulnerabilities and suggested fixes to stakeholders.
 
+
 **Post-Testing Activities:** After reporting, I assist with remediation efforts and conduct re-testing to ensure that vulnerabilities
 have been addressed and no new issues have been introduced.
+
 
 Overall, my approach to VAPT is thorough and methodical, aimed at uncovering potential security risks and providing actionable
 recommendations to enhance the security posture of the web application.
