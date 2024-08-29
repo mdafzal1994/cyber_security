@@ -16,6 +16,9 @@ use proper Encoding techniques when including user input in server responses
 **JavaScript Encoding**: If inserting data into JavaScript contexts, ensure that characters are properly encoded to prevent script injection.
 **CSS Encoding**: If inserting data into CSS, ensure it is properly escaped to prevent injection.
 
+<img width="577" alt="image" src="https://github.com/user-attachments/assets/820b5493-3cbd-4c45-89ed-ed3e79a3ecc9">
+
+
 Note: Difference in Sanitization and  Escaping Techniques
 
 **Sanitization**: Focuses on removing or altering harmful content from user input before processing or storing it.
