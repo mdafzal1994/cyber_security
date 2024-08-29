@@ -14,6 +14,15 @@ DOM XSS https://www.invicti.com/learn/dom-based-cross-site-scripting-dom-xss/
 **HTML Encoding**: Encode output data when it is inserted into HTML. This means converting special characters to their HTML entity equivalents (e.g., < becomes '& lt;).
 **JavaScript Encoding**: If inserting data into JavaScript contexts, ensure that characters are properly encoded to prevent script injection.
 **CSS Encoding**: If inserting data into CSS, ensure it is properly escaped to prevent injection.
+
+Note: Difference in Sanitization and  Escaping Techniques
+
+**Sanitization**: Focuses on removing or altering harmful content from user input before processing or storing it.
+Eg . Sanitization might convert <script>alert('XSS')</script> into a plain text string like alert('XSS') by removing the <script> tags.
+
+**Escaping**: Focuses on converting special characters in user input into a safe format to prevent them from being interpreted as code when displayed or used in a specific context.
+eg .Escaping might convert <script>alert('XSS')</script> into &lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt; when rendering it in an HTML context, which prevents the script from executing.
+
 ### 3. Use Safe Methods for Rendering Data
 **Avoid Direct DOM Manipulation**: Use frameworks or libraries that handle DOM manipulation securely, such as React or Angular, which automatically escape data.
 **Use Safe APIs**: Prefer using safe APIs that do not expose raw data to the DOM.
