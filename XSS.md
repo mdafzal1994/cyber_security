@@ -26,7 +26,7 @@ Eg . <img width="548" alt="image" src="https://github.com/user-attachments/asset
 eg .<img width="549" alt="image" src="https://github.com/user-attachments/assets/b9f779d2-1493-43c5-ac0e-4655241155fd">
 
 
-### 3. Use Safe Methods for Rendering Data
+### 3. Adopt Secure Techniques for Displaying Data
 **Avoid Direct DOM Manipulation**: Use frameworks or libraries that handle DOM manipulation securely, such as React or Angular, which automatically escape data.
 **Use Safe APIs**: Prefer using safe APIs that do not expose raw data to the DOM.
 ### 4. Implement Content Security Policy (CSP)
