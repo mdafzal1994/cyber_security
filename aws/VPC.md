@@ -18,17 +18,5 @@ In AWS, **Network ACLs (NACLs)** and **Security Groups** serve different roles i
 - **Default Behavior:** Security Groups automatically handle response traffic for allowed inbound requests, simplifying rule management and ensuring that connections are properly established and maintained.
 - **Use Case:** Security Groups are used to control traffic at the instance level within a VPC. They provide a more granular level of security by applying rules to the traffic allowed to and from individual instances.
 
-### Key Differences
 
-1. **Statefulness:**
-   - **NACLs:** Stateless—rules must be defined separately for inbound and outbound traffic, and there’s no connection tracking.
-   - **Security Groups:** Stateful—rules automatically handle the state of connections, simplifying rule management for response traffic.
-
-2. **Scope:**
-   - **NACLs:** Applied at the subnet level, affecting all instances and resources within the subnet.
-   - **Security Groups:** Applied at the instance level, allowing fine-grained control over traffic to and from specific instances.
-
-3. **Rule Management:**
-   - **NACLs:** Require explicit rules for both directions of traffic, which can be more complex to manage.
-   - **Security Groups:** Manage rules based on the instance’s connection state, making it easier to configure and manage security policies for instances.
 
