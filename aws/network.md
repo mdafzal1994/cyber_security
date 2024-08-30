@@ -37,8 +37,9 @@ including IP address ranges, subnets, route tables, and network gateways.
 
 1. **Layer of Protection:**
    - **AWS Network Firewall:** Operates at Layer 3 and Layer 4, dealing with IP addresses, ports, and protocols.
+       AWS Network Firewall is stateful, meaning it tracks the state of active connections and applies rules based on this state.
    - **AWS WAF:** Operates at Layer 7, focusing on HTTP and HTTPS traffic and application-specific threats.
-   - AWS Network Firewall is stateful, meaning it tracks the state of active connections and applies rules based on this state.
+     
 
 2. **Traffic Filtering:**
    - **AWS Network Firewall:** Filters traffic at the network level (e.g., IP and port-based rules).
@@ -46,7 +47,7 @@ including IP address ranges, subnets, route tables, and network gateways.
 
 3. **Scope of Protection:**
    - **AWS Network Firewall:** Protects entire VPCs by filtering traffic between subnets and external networks.
-   - **AWS WAF:** Protects specific web applications and APIs from web-based threats.
+   - **AWS WAF:** Protects specific web applications and APIs from web-based threats.Protecting web applications from common attacks such as SQL injection, XSS, and other application layer threats.
 
 4. **Integration Points:**
    - **AWS Network Firewall:** Primarily integrates with VPCs and can be used to control traffic flows within and across VPCs.
