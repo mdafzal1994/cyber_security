@@ -6,6 +6,7 @@ Here’s a concise summary of the key points for securing your AWS environment:
    - Assign IAM roles to EC2 instances to grant permissions securely without embedding credentials in code.
    **Check EC2 instances have Public IP and Instance Profiles attached**
 **Public IP Address**: Exposure to the public internet requires careful configuration of security groups to prevent unauthorized access.
+
 **Instance Profile:** Improves security by avoiding the need to hardcode credentials and managing access through IAM policies.
 
 2. **Configure Security Groups:**
