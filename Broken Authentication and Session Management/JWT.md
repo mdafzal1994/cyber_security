@@ -21,12 +21,10 @@ The header is a JSON object that typically contains two properties: The type of 
 
 Example of JSON header:
 
-Open menu
 {
   "alg": "HS256",
   "typ": "JWT"
 }
-
 the header’s **alg** field specifies the algorithm used to sign the token. This field indicates which cryptographic algorithm is used to ensure the integrity
 and authenticity of the token. Common algorithms include:
 
