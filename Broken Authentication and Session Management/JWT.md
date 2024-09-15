@@ -72,3 +72,22 @@ Open menu
 
 The signature is created by signing the Base64Url encoded header and payload with a secret key and an algorithm specified by the developers.
 It is used to verify that the sender of the JWT is who they claim to be and ensure the token's integrity.
+
+### What are JWT attacks?
+
+JWT attacks involve a user sending modified JWTs to the server in order to achieve a malicious goal. Typically, this goal is to bypass authentication and access controls by impersonating another user who has already been authenticated.
+
+1. **Information leakage**:
+
+Since JSON web tokens are used for access control, they often contain information about the user.
+
+2. **None Algorithm Attack**:
+
+JWT supports a “none” algorithm. If the alg field is set to “none”, any token would be considered valid if their signature section is set to empty.
+
+
+3. **JWT header parameter injections**
+   
+  1. **Kid Parameter attack**:
+
+KID is parameter seen in jwt token, and if the parameter is not properly validated it leads to attacks like Command injection, LFI, SQLi etc. Since the KID is often used to retrieve a key file from the file system, if it is not sanitized before use, it can lead to a directory traversal attack.
