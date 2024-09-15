@@ -3,7 +3,6 @@
 
 import requests
 
-
 def request(url):
     try:
         request= requests.get("http://" + url)
