@@ -91,3 +91,8 @@ JWT supports a “none” algorithm. If the alg field is set to “none”, any 
     1. **Kid Parameter attack**:
 
 KID is parameter seen in jwt token, and if the parameter is not properly validated it leads to attacks like Command injection, LFI, SQLi etc. Since the KID is often used to retrieve a key file from the file system, if it is not sanitized before use, it can lead to a directory traversal attack.
+
+4. **JWT authentication bypass via weak signing key**
+   
+   Brute-forcing secret keys
+Some signing algorithms, such as HS256 (HMAC + SHA-256), use an arbitrary, standalone string as the secret key. Just like a password, it's crucial that this secret can't be easily guessed or brute-forced by an attacker. Otherwise, they may be able to create JWTs with any header and payload values they like, then use the key to re-sign the token with a valid signature.
