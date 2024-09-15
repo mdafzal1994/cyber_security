@@ -88,6 +88,6 @@ JWT supports a “none” algorithm. If the alg field is set to “none”, any 
 
 3. **JWT header parameter injections**
    
-  1. **Kid Parameter attack**:
+    1. **Kid Parameter attack**:
 
 KID is parameter seen in jwt token, and if the parameter is not properly validated it leads to attacks like Command injection, LFI, SQLi etc. Since the KID is often used to retrieve a key file from the file system, if it is not sanitized before use, it can lead to a directory traversal attack.
