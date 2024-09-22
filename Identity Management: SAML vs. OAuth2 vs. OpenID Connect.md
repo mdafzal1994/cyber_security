@@ -31,6 +31,25 @@ OpenID Connect (OIDC) is an authentication layer built on top of the OAuth 2.0 a
 in a standardized way. This makes it easier for developers to implement user authentication in their applications while maintaining security.
 
 
+
+**OIDC vs. SAML**
+
+**Implementation**: OIDC is more developer-friendly than SAML and easier to implement as it uses JSON tokens (ID tokens) which are more feasible to handle than XML in SAML.
+                     Due to its popularity and modern feel, many libraries have been built around it for faster implementation. SAML can be difficult to implement and manage.
+
+                     Here's a summarized comparison of OpenID Connect (OIDC) and SAML based on the shared concepts:
+
+| **Feature**                                 | **OIDC**                                          | **SAML**                                         |
+|---------------------------------------------|--------------------------------------------------|--------------------------------------------------|
+| **Tokens/Assertions**                       | ID tokens contain authentication details about the user | Assertions contain authentication details about the user |
+| **Redirection**                             | Redirects to a Redirect URI after authentication | Redirects back to a Relay State after authentication |
+| **Token Validity**                          | Uses `nbf` and `exp` for token validity duration | Uses `NotBefore` and `NotOnOrAfter` for token validity duration |
+| **Authentication Role**                     | The OpenID Provider (OP) authenticates the user | The Identity Provider (IdP) authenticates the user |
+| **Data Requester**                          | The Relying Party (RP) wants the user data      | The Service Provider (SP) wants the user data    |
+
+This table highlights the key similarities between OIDC and SAML, focusing on their authentication processes and data handling.
+
+
 ### How OpenID Connect (OIDC) Works: Summary
 
 OpenID Connect is an authentication protocol that allows users to log into applications using an identity provider (IdP) like Google. Here’s a simplified flow of how it works:
