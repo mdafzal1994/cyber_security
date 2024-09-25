@@ -69,8 +69,14 @@ When implementing OAuth 2.0, it’s essential to adhere to the following best pr
 **Use short-lived access tokens**: Limiting the lifespan of access tokens helps contain the damage if they are compromised. Refresh tokens allow legitimate clients to obtain new access tokens without involving the user.
 Limit token scope: Access tokens should always have the smallest scope required for the specific application functionality.
 
-**Secure the application against common attack patterns**: It is important to take adequate measures to reduce your system’s vulnerability to attack. For instance, using the `**state**` parameter when initiating an authorization request—and validating the returned state against the initial value—can help protect against **CSRF (Cross-Site Request Forgery) attacks**. You should also implement rate limiting, which will help prevent Denial-of-Service (DoS) attacks.
+**Secure the application against common attack patterns**: It is important to take adequate measures to reduce your system’s vulnerability to attack. For instance, using the **`state`** parameter when initiating an authorization request—and validating the returned state against the initial value—can help protect against **CSRF (Cross-Site Request Forgery) attacks**. You should also implement rate limiting, which will help prevent Denial-of-Service (DoS) attacks.
 
 **Handle access tokens securely**: Access tokens should be sent in a request header when the client is requesting a resource from the resource server. They shouldn’t be stored as cookies or transmitted over query parameters. Additionally, the authorization server must include the HTTP “Cache-Control” response header field with a value of “no-store” in any response containing tokens, credentials, or other sensitive information, as well as the “Pragma” response header field with a value of “no-cache”.
 
 **Allow users to revoke access to their data**: OAuth 2.0 is designed in such a way that the resource owner has complete control of their data. It is therefore important to provide a mechanism to revoke tokens so that users can block unwanted access.
+
+
+
+ref: 
+https://blog.postman.com/what-is-oauth-2-0/
+https://darutk.medium.com/diagrams-and-movies-of-all-the-oauth-2-0-flows-194f3c3ade85
