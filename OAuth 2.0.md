@@ -79,4 +79,5 @@ Limit token scope: Access tokens should always have the smallest scope required 
 
 ref: 
 https://blog.postman.com/what-is-oauth-2-0/
+
 https://darutk.medium.com/diagrams-and-movies-of-all-the-oauth-2-0-flows-194f3c3ade85
