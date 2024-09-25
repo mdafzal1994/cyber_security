@@ -54,7 +54,7 @@ Here is a step-by-step breakdown of everything that happens under the hood:
 ![image](https://github.com/user-attachments/assets/2806aa85-7391-4008-afaf-84dc0f870ef8)
 
 
-![image](https://github.com/user-attachments/assets/342ea21e-5ea5-44e7-9c56-5ab80b948161)
+[![image](https://github.com/user-attachments/assets/342ea21e-5ea5-44e7-9c56-5ab80b948161)](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*mv6r2tRwmWrPKxHpSyNCXA.png)
 
 
 **What is the difference between access tokens and refresh tokens in OAuth?**
