@@ -56,3 +56,21 @@ Here is a step-by-step breakdown of everything that happens under the hood:
 
 ![image](https://github.com/user-attachments/assets/342ea21e-5ea5-44e7-9c56-5ab80b948161)
 
+
+**What is the difference between access tokens and refresh tokens in OAuth?**
+
+Access tokens are often short-lived and therefore need to be re-generated upon expiration. Refresh tokens are used to obtain new access tokens and often have a longer lifespan than access tokens. However, not all OAuth providers issue refresh tokens.
+
+**What are some best practices for working with OAuth 2.0?**
+
+When implementing OAuth 2.0, it’s essential to adhere to the following best practices in order to secure your application and protect user data:
+
+
+**Use short-lived access tokens**: Limiting the lifespan of access tokens helps contain the damage if they are compromised. Refresh tokens allow legitimate clients to obtain new access tokens without involving the user.
+Limit token scope: Access tokens should always have the smallest scope required for the specific application functionality.
+
+**Secure the application against common attack patterns**: It is important to take adequate measures to reduce your system’s vulnerability to attack. For instance, using the `**state**` parameter when initiating an authorization request—and validating the returned state against the initial value—can help protect against **CSRF (Cross-Site Request Forgery) attacks**. You should also implement rate limiting, which will help prevent Denial-of-Service (DoS) attacks.
+
+**Handle access tokens securely**: Access tokens should be sent in a request header when the client is requesting a resource from the resource server. They shouldn’t be stored as cookies or transmitted over query parameters. Additionally, the authorization server must include the HTTP “Cache-Control” response header field with a value of “no-store” in any response containing tokens, credentials, or other sensitive information, as well as the “Pragma” response header field with a value of “no-cache”.
+
+**Allow users to revoke access to their data**: OAuth 2.0 is designed in such a way that the resource owner has complete control of their data. It is therefore important to provide a mechanism to revoke tokens so that users can block unwanted access.
