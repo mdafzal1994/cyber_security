@@ -42,3 +42,49 @@ To block the loading of any content apart from scripts loaded from domain exampl
 
 
 Content-Security-Policy: default-src 'none'; script-src https://example.com
+
+
+
+==========================================================================================================
+
+
+// server.js
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+// Set CSP headers
+app.use((req, res, next) => {
+    res.setHeader("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';");
+    next();
+});
+
+// Serve a simple HTML page
+app.get('/', (req, res) => {
+    res.send(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>CSP Demo</title>
+            <style>
+                body { font-family: Arial, sans-serif; }
+            </style>
+        </head>
+        <body>
+            <h1>Hello, CSP!</h1>
+            <p>This page has a Content Security Policy.</p>
+            <script>
+                console.log('This script runs because it is from the same origin.');
+            </script>
+            <script src="https://example.com/some-script.js"></script> <!-- This will be blocked -->
+        </body>
+        </html>
+    `);
+});
+
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+
