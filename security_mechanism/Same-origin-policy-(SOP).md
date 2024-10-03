@@ -15,3 +15,5 @@ SOP does not need to be turned on – it is automatically enabled in every brows
 
 ### Diff csp vs sop
 The same-origin policy is often confused with content security policies. The difference is that content security policies prevent calls to external resources (outbound) while the same-origin policy prevents calls from external resources (inbound). Also, content security policies are not enabled by default and must be defined by developers.
+
+**Same-Origin Policy** is primarily focused on preventing data access between different origins, while **Content Security Policy** is aimed at controlling which resources can be loaded and executed, enhancing security against script-based attacks.
