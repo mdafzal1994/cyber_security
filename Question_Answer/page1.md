@@ -4,7 +4,6 @@
                   Redundancy: If one server fails, the load balancer reroutes traffic, ensuring high availability and minimizing downtime.
 
 **Reverse Proxy** Purpose: Acts as an intermediary between clients and backend servers, managing and directing requests.
-
                   Anonymity: Hides the identities and details of backend servers from clients, reducing exposure to attacks.
                   reverse proxies are often more focused on application-level security.
                   
