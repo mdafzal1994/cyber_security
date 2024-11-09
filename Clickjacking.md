@@ -1,3 +1,4 @@
+![image](https://github.com/user-attachments/assets/569c580d-1561-4a83-8dc2-b2f8ab8f86dd)
 
 **Clickjacking** is a type of web-based attack where a user is tricked into clicking something they didn't intend to. It works by placing a hidden, malicious element (like a button or a link) on top 
 of a page the user is interacting with. The user sees and clicks on a visible, harmless element (for example, a "Click here to win a prize" button), but in reality, they are unknowingly clicking on a hidden, 
