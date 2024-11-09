@@ -5,7 +5,7 @@ malicious button that performs an unwanted action, such as transferring money or
 
 Here’s how it typically works:
 
-1. The attacker creates a decoy webpage, often offering something enticing like a game or a reward ("Win a prize!" button).
+1. The attacker creates a decoy (fake) webpage, often offering something enticing like a game or a reward ("Win a prize!" button).
 2. On top of this page, they overlay an invisible, malicious button that performs a harmful action (like making a payment or changing security settings).
 3. When the user clicks the visible button, they also unknowingly trigger the hidden malicious button in the background.
 
