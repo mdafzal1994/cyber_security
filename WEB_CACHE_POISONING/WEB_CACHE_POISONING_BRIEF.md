@@ -36,7 +36,7 @@ Although the requests have different Accept-Language headers, both will receive 
 ### How to Prevent Web Cache Poisoning Attacks
 
 
-- **Sanitize Inputs**: Ensure your app doesn't use unsanitized user input (like HTTP headers) in responses to prevent attacks (e.g., Host header attacks).
+- **Sanitize Inputs**: Validating all user input can help prevent attackers from injecting malicious data into web caches. Input validation should include checking for unexpected characters, sizes and formats.
 - **Fix XSS Vulnerabilities**: Web cache poisoning can spread cross-site scripting (XSS) attacks, so secure your app against XSS.
 - **Sanitize Response Headers**: Don't generate response headers based on request headers without proper sanitization.
 - **Follow Security Best Practices**: Never trust user input and always validate it.
