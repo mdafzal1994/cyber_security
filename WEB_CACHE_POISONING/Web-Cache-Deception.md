@@ -84,3 +84,17 @@ An origin server using REST-style URL mapping may interpret this as a request fo
 A cache that uses traditional URL mapping may view this as a request for a file named wcd.css located in the /profile directory under /user/123. It interprets
 the URL path as /user/123/profile/wcd.css. If the cache is configured to store responses for requests where the path ends in .css, it would cache and serve the
 profile information as if it were a CSS file.
+
+
+**Preventing web cache deception vulnerabilities**
+
+You can take a range of steps to prevent web cache deception vulnerabilities:
+
+1. Always use Cache-Control headers to mark dynamic resources, set with the directives no-store and private.
+2. Configure your CDN settings so that your caching rules don't override the Cache-Control header.
+3. Activate any protection that your CDN has against web cache deception attacks. Many CDNs enable you to set a cache rule that verifies that the response Content-  Type matches the request's URL file extension. For example, Cloudflare's Cache Deception Armor.
+  eg. If an attacker sends a request to /profile.jpg, but the response content type is text/html (a dynamic webpage), Cloudflare’s Cache Deception Armor can  
+       detect this mismatch and prevent caching, ensuring that sensitive content is not served to unauthorized users.
+   
+5. Verify that there aren't any discrepancies between how the origin server and the cache interpret URL paths.
+   
