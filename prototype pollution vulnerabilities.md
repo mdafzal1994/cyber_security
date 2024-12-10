@@ -1,6 +1,9 @@
 https://learn.snyk.io/lesson/prototype-pollution/
+
 https://portswigger.net/web-security/prototype-pollution
+
 https://portswigger.net/web-security/prototype-pollution/javascript-prototypes-and-inheritance#the-prototype-chain
+
 
 **What is prototype pollution?**
 Prototype pollution is a JavaScript vulnerability that enables an attacker to add arbitrary properties to global object prototypes, which may then be inherited by user-defined objects.
