@@ -6,12 +6,14 @@ https://portswigger.net/web-security/prototype-pollution/javascript-prototypes-a
 
 
 **What is prototype pollution?**
+
 Prototype pollution is a JavaScript vulnerability that enables an attacker to add arbitrary properties to global object prototypes, which may then be inherited by user-defined objects.
 This allows the attacker to tamper with the logic of the application and can also lead to denial of service or, in extreme cases, remote code execution.
 
 
 
 **How do prototype pollution vulnerabilities arise?**
+
 Prototype pollution vulnerabilities typically arise when a JavaScript function recursively merges an object containing user-controllable properties into an existing object, without first sanitizing the keys. This can allow an attacker to inject a property with a key like __proto__, along with arbitrary nested properties.
 
 For example, an attacker could submit a payload like {"__proto__": {"isPolluted": true}} through an API or form, and all objects in the application could inherit the isPolluted property.
@@ -19,6 +21,7 @@ For example, an attacker could submit a payload like {"__proto__": {"isPolluted"
 
 
 **What is a prototype in JavaScript?**
+
 
 ![image](https://github.com/user-attachments/assets/2be2fcaa-7e7b-43a3-8183-38d5aeb641ef)
 
