@@ -14,9 +14,9 @@ This allows the attacker to tamper with the logic of the application and can als
 
 **How do prototype pollution vulnerabilities arise?**
 
-Prototype pollution vulnerabilities typically arise when a JavaScript function recursively merges an object containing user-controllable properties into an existing object, without first sanitizing the keys. This can allow an attacker to inject a property with a key like **__proto__**, along with arbitrary nested properties.
+Prototype pollution vulnerabilities typically arise when a JavaScript function recursively merges an object containing user-controllable properties into an existing object, without first sanitizing the keys. This can allow an attacker to inject a property with a key like `__proto__`, along with arbitrary nested properties.
 
-For example, an attacker could submit a payload like {"__proto__": {"isPolluted": true}} through an API or form, and all objects in the application could inherit the isPolluted property.
+For example, an attacker could submit a payload like {"`__proto__`": {"isPolluted": true}} through an API or form, and all objects in the application could inherit the isPolluted property.
 
 
 
@@ -47,12 +47,12 @@ As a result, all strings automatically have a ready-to-use method for converting
 
 **how to detect prototype pollution vulnerabilities**
 
-Manually, you can test an application by sending payloads like {"__proto__": {"polluted": true}} through user input fields or API endpoints, and then checking if unintended properties appear on global objects, such as {}.polluted."
+Manually, you can test an application by sending payloads like {"`__proto__`": {"polluted": true}} through user input fields or API endpoints, and then checking if unintended properties appear on global objects, such as {}.polluted."
 
 **Prototype pollution mitigation**
 1. Sanitizing property keys
 One of the more obvious ways to prevent prototype pollution vulnerabilities is to sanitize property keys before merging them into existing objects.
- This way, you can prevent an attacker from injecting keys such as __proto__, which reference the object's prototype.
+ This way, you can prevent an attacker from injecting keys such as`__proto__`, which reference the object's prototype.
 
 2. Create objects without prototypes: Object.create(null)
 Another way to avoid prototype pollution is to consider using the Object.create() method instead of the object literal {} or the object constructor new Object() when creating new objects. 
