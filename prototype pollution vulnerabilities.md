@@ -6,9 +6,14 @@ https://portswigger.net/web-security/prototype-pollution/javascript-prototypes-a
 Prototype pollution is a JavaScript vulnerability that enables an attacker to add arbitrary properties to global object prototypes, which may then be inherited by user-defined objects.
 This allows the attacker to tamper with the logic of the application and can also lead to denial of service or, in extreme cases, remote code execution.
 
+
+
 **How do prototype pollution vulnerabilities arise?**
-Prototype pollution vulnerabilities typically arise when a JavaScript function recursively merges an object containing user-controllable properties into an existing object, without first 
-sanitizing the keys. This can allow an attacker to inject a property with a key like __proto__, along with arbitrary nested properties.
+Prototype pollution vulnerabilities typically arise when a JavaScript function recursively merges an object containing user-controllable properties into an existing object, without first sanitizing the keys. This can allow an attacker to inject a property with a key like __proto__, along with arbitrary nested properties.
+
+For example, an attacker could submit a payload like {"__proto__": {"isPolluted": true}} through an API or form, and all objects in the application could inherit the isPolluted property.
+
+
 
 **What is a prototype in JavaScript?**
 
@@ -33,6 +38,10 @@ This enables developers to create new objects that can reuse the properties and 
 
 The built-in prototypes provide useful properties and methods for working with basic data types. For example, the String.prototype object has a toLowerCase() method. 
 As a result, all strings automatically have a ready-to-use method for converting them to lowercase. This saves developers having to manually add this behavior to each new string that they create.
+
+**how to detect prototype pollution vulnerabilities**
+
+Manually, you can test an application by sending payloads like {"__proto__": {"polluted": true}} through user input fields or API endpoints, and then checking if unintended properties appear on global objects, such as {}.polluted."
 
 **Prototype pollution mitigation**
 1. Create objects without prototypes: Object.create(null)
