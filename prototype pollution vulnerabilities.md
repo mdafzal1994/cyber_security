@@ -14,7 +14,7 @@ This allows the attacker to tamper with the logic of the application and can als
 
 **How do prototype pollution vulnerabilities arise?**
 
-Prototype pollution vulnerabilities typically arise when a JavaScript function recursively merges an object containing user-controllable properties into an existing object, without first sanitizing the keys. This can allow an attacker to inject a property with a key like __proto__, along with arbitrary nested properties.
+Prototype pollution vulnerabilities typically arise when a JavaScript function recursively merges an object containing user-controllable properties into an existing object, without first sanitizing the keys. This can allow an attacker to inject a property with a key like **__proto__**, along with arbitrary nested properties.
 
 For example, an attacker could submit a payload like {"__proto__": {"isPolluted": true}} through an API or form, and all objects in the application could inherit the isPolluted property.
 
