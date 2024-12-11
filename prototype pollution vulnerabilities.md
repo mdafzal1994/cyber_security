@@ -64,14 +64,17 @@ Host: vulnerable-website.com
 ![image](https://github.com/user-attachments/assets/881514ea-6fdb-407f-97ca-fe3f497521a7)
 
 **Prototype pollution mitigation**
-1. Sanitizing property keys
+1. **Sanitizing property keys**
+2. 
 One of the more obvious ways to prevent prototype pollution vulnerabilities is to sanitize property keys before merging them into existing objects.
  This way, you can prevent an attacker from injecting keys such as`__proto__`, which reference the object's prototype.
 
-2. Create objects without prototypes: Object.create(null)
+3. **Create objects without prototypes: Object.create(null)**
+   
 Another way to avoid prototype pollution is to consider using the Object.create() method instead of the object literal {} or the object constructor new Object() when creating new objects. 
 This way, we can set the prototype of the created object directly via the first argument passed to Object.create(). If we pass null, the created object will not have a prototype and therefore cannot be polluted.
 
-3. Prevent any changes to the prototype: use Object.freeze()
+5. **Prevent any changes to the prototype: use Object.freeze()**
+   
 JavaScript comes with an Object.freeze() method, which we can use to prevent any changes to the attributes of an object.
 Since the prototype is just an object, we can freeze it, too. We can freeze the default prototype by invoking Object.freeze(Object.prototype), which prevents the default prototype from getting polluted.
