@@ -49,6 +49,20 @@ As a result, all strings automatically have a ready-to-use method for converting
 
 Manually, you can test an application by sending payloads like {"`__proto__`": {"polluted": true}} through user input fields or API endpoints, and then checking if unintended properties appear on global objects, such as {}.polluted."
 
+
+POST /user/update HTTP/1.1
+Host: vulnerable-website.com
+...
+{
+    "user":"wiener",
+    "firstName":"Peter",
+    "lastName":"Wiener",
+    "__proto__":{
+        "foo":"bar"
+    }
+}
+![image](https://github.com/user-attachments/assets/881514ea-6fdb-407f-97ca-fe3f497521a7)
+
 **Prototype pollution mitigation**
 1. Sanitizing property keys
 One of the more obvious ways to prevent prototype pollution vulnerabilities is to sanitize property keys before merging them into existing objects.
