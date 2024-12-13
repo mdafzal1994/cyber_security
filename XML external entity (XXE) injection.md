@@ -26,6 +26,8 @@ There are various types of XXE attacks:
 
 
 **What is XInclude?**
+XInclude is a part of the XML specification that allows an XML document to be built from sub-documents. You can place an XInclude attack within any data value in an XML document, so the attack can be performed in situations where you only control a single item of data that is placed into a server-side XML document.
+
 XInclude is a feature in XML that allows you to include parts of other XML documents into a main XML document. It’s commonly used to break large XML documents into smaller, reusable components.
 However, this feature can be exploited in security attacks, especially when the application fails to properly handle user input.
 
