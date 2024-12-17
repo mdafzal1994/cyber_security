@@ -17,6 +17,8 @@ There are three main ways to exploit HRS vulnerabilities:
 
 **Impact**
 
+When the reverse proxy and web server disagree on the boundaries of the HTTP request (TE or CL), a discrepancy occurs behind the scenes that impacts the beginning and the subsequent request, leading to data being left in the TCP stream. One of the two systems treats this as a partial HTTP request, while the other treats it as part of the previous request.
+
 
 1. an attacker may manipulate the next HTTP request of a real user,
 2. gaining access to sensitive information about the system and the user, or
