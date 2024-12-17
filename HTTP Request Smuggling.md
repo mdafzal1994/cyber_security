@@ -14,6 +14,15 @@ There are three main ways to exploit HRS vulnerabilities:
 
 **TE-TE**: the front-end and back-end servers both support the Transfer-Encoding header, but one of the servers can be induced not to process it by obfuscating the header in some way.
 
+
+**Impact**
+
+
+1. an attacker may manipulate the next HTTP request of a real user,
+2. gaining access to sensitive information about the system and the user, or
+3. even making changes on behalf of another user.
+   
+
 **How to prevent HTTP request smuggling vulnerabilities**
 
 
